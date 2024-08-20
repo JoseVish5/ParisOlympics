@@ -20,12 +20,6 @@
   height: 85%;
 }
 
-/* .fixed-image {
-  margin-top: 115px;
-  max-width: 100%;
-  max-height: 80%;
-} */
-
 .fixed-image {
   margin-left: 51px;
   margin-top: 95px;
@@ -198,4 +192,90 @@
     text-align: center;
     width: 90%;
   }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) and (max-height: 1080px) {
+  .scroll-container {
+    display: flex;
+    height: 95vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .headline {
+    color: black;
+    font-weight: 700;
+    font-family: "Montserrat", Arial, sans-serif;
+    margin-bottom: -40px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .fixed-image-container {
+    position: absolute;
+    height: 85%;
+  }
+  
+  .fixed-image {
+    margin-left: 100px;
+    margin-top: 155px;
+    width: 950px;
+    height: 600px;
+    object-fit: cover; /* Ensures image covers the container without distortion */
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite; /* Floating animation */
+  }
+  
+  /* 3D Reflection Effect */
+  .fixed-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
+    transform: scaleY(-1);
+    opacity: 0.5;
+    pointer-events: none; /* Prevents reflection from being interactive */
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); /* Start and end at the same position */
+    }
+    50% {
+      transform: translateY(-10px); /* Slight upward movement */
+    }
+  }
+  
+  .fixed-image-container:hover .fixed-image {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.05); /* Subtle tilt and zoom */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .scroll-content {
+    text-align: center;
+    font-size: 1.8rem;
+    flex: 1 0 1%;
+    margin-left: 60%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .scroll-item {
+    height: 82vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scroll-text {
+    width: 50%;
+  }
+
 }
