@@ -134,7 +134,7 @@
 
   .fixed-image {
     margin-left: 8px;
-    margin-top: -15px;
+    margin-top: -20px;
     max-width: 95%;
     max-height: 27vh;
   }
@@ -146,7 +146,7 @@
   }
 
   .scroll-item {
-    height: 99vh; /* Full viewport height */
+    height: 95vh; /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,78 +199,3 @@
     width: 90%;
   }
 }
-
-
-/* @media (min-width: 600px) and (max-width: 1024px) {
-  .fixed-image[_ngcontent-ng-c493559244] {
-      margin-left: 8px;
-      max-width: 95%;
-      max-height: 82vh;
-  }
-} */
-
-
-/* /////// */
-
-
-   /* .scroll-container {
-    display: flex;
-    height: 100vh;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-  
-  .fixed-image-container {
-    margin-left: 24px;
-    margin-top: 85px;
-    position: absolute;
-    height: 85%;
-  }
-  
-  .fixed-image {
-    max-width: 100%;
-    max-height: 80%;
-  }
-  
-  .scroll-content {
-    flex: 1 0 1%;
-    margin-left: 70%;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .scroll-item {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .scroll-text {
-    width: 50%;
-  }
-  
-  @media (max-width: 768px) {
-    .scroll-container {
-      flex-direction: column;
-    }
-  
-    .fixed-image-container {
-      position: static;
-      width: 100%;
-    }
-  
-    .scroll-content {
-      margin-left: 0;
-    }
-  
-    .fixed-image {
-      max-width: 100%;
-      max-height: 50vh;
-    }
-  
-    .scroll-text {
-      width: 100%;
-    }
-  } */
-  
